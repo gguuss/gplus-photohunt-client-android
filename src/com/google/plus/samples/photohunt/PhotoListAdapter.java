@@ -150,7 +150,7 @@ public class PhotoListAdapter extends PinnedHeaderArrayAdapter<Photo> {
         // Only active photos can be voted for.
         final boolean isActive = (mTheme != null 
                 && mActiveTheme != null 
-                && mActiveTheme.id == mTheme.id);
+                && mActiveTheme.id.equals(mTheme.id));
         
         // Set the users name and profile image if they are available
         if (!TextUtils.isEmpty(metadata.ownerDisplayName)) {

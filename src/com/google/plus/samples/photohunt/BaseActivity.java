@@ -199,6 +199,7 @@ public abstract class BaseActivity extends SherlockFragmentActivity implements
 	 */
 	@Override
 	public void onSignInFailed() {
+		setAuthenticatedProfile(null);
 		update();
 	}
 

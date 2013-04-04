@@ -97,11 +97,11 @@ public class Photo {
     public String photoContentUrl;
     
     public boolean hasAuthor(User profile) {
-        return ownerUserId == profile.id;
+        return ownerUserId.equals(profile.id);
     }
     
     public boolean hasTheme(Theme theme) {
-        return themeId != theme.id;
+        return !themeId.equals(theme.id);
     }
 
     public String getUri() {

@@ -263,7 +263,7 @@ public class ThemeViewActivity extends BaseActivity {
         if (isAuthenticated()) {
             // Only allow image upload, gallery select or profile view if the user is 
             // authenticated.
-            if (active != null && mTheme != null && active.id == mTheme.id) {
+            if (active != null && mTheme != null && active.id.equals(mTheme.id)) {
                 menu.add(0, R.id.menu_item_upload, 0, getString(R.string.upload_menu_title))
                         .setIcon(android.R.drawable.ic_menu_camera)
                         .setShowAsAction(
@@ -456,7 +456,7 @@ public class ThemeViewActivity extends BaseActivity {
                     setSelectedTheme(active);
                 } else if (mTheme == null) {
                     for (Theme theme : mThemes) {
-                        if (mThemeId == theme.id) {
+                        if (mThemeId.equals(theme.id)) {
                             setSelectedTheme(theme);
                             break;
                         }

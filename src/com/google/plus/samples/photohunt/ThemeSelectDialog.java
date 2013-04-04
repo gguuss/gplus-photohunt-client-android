@@ -54,8 +54,8 @@ public class ThemeSelectDialog extends DialogFragment {
         			
         			// Update the selected theme if it is different from the current theme
         			if (current == null && selected == null
-        				|| current.id == selected.id) {
-        				activity.setSelectedTheme(themes.get(which));
+        				|| !current.id.equals(selected.id)) {
+        				activity.setSelectedTheme(selected);
         				activity.update();
         			}
         		}

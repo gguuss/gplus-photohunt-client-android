@@ -264,7 +264,7 @@ public final class PlusClientFragment extends Fragment
     }
 
     @Override
-    public void onConnected() {
+    public void onConnected(Bundle bundle) {
         // Successful connection!
         mLastConnectionResult = CONNECTION_RESULT_SUCCESS;
         mRequestCode = INVALID_REQUEST_CODE;
